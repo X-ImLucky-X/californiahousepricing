@@ -8,6 +8,7 @@ debugpy @ file:///C:/ci/debugpy_1637091911212/work
 decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
 entrypoints @ file:///C:/ci/entrypoints_1649926659561/work
 Flask==2.2.5
+gunicorn==20.1.0
 flit_core @ file:///opt/conda/conda-bld/flit-core_1644941570762/work/source/flit_core
 fonttools==4.25.0
 importlib-metadata==6.7.0
