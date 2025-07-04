@@ -2,6 +2,8 @@ import pickle
 from flask import Flask,request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd
+import os
+
 
 app=Flask(__name__) #this is the starting point of our application
 regmodel=pickle.load(open('regmodel.pkl','rb'))#load the model
@@ -31,5 +33,5 @@ def predict():
     output=regmodel.predict(final_input)[0]
     return render_template('home.html',prediction_text='The House Price Prediction is {}'.format(output))
 
-if __name__ == "__main__":
-    app.run(debug=True) #debug=True will help us to see the errors in the console
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
