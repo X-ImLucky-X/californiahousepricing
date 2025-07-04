@@ -1,8 +1,10 @@
 [phases.setup]
-nixPkgs = ["python37Full"]
+nixPkgs = [
+  "python37.withPackages (ps: with ps; [ pip setuptools wheel ])"
+]
 
 [phases.build]
-cmds = ["python -m ensurepip", "pip install -r requirements.txt"]
+cmds = ["pip install -r requirements.txt"]
 
 [start]
 cmd = "gunicorn app:app"
