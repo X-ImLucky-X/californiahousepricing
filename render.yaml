@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: california-house-pricing
+    env: docker
+    repo: https://github.com/yourusername/californiahousepricing
+    plan: free
+    branch: main
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
