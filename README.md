@@ -10,6 +10,6 @@
 Create a new Environment
 
 ```
-conda create -p venv python==3.7 -y
+conda create -p venv python==3.11 -y
 ```"# test deploy" 
 "# test deploy" 
